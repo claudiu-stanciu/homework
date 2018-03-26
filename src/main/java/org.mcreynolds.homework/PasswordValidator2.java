@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
  */
 public class PasswordValidator2 {
     public static boolean isValid(String pass) {
-        String pattern = "[a-zA-Z0-9!@#$%^&*]{5,8}";
+        String pattern = "^.*(?=.{5,8})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).*$";
         return Pattern.matches(pattern, pass);
 
     }

@@ -30,4 +30,16 @@ public class TestPasswordValidator2 {
         String password = "Ka41jn+=";
         assertFalse(PasswordValidator2.isValid(password));
     }
+
+    @Test
+    public void notValidNoDiversity(){
+        String password = "asSFD!#";
+        assertFalse(PasswordValidator2.isValid(password));
+        password = "askmess";
+        assertFalse(PasswordValidator2.isValid(password));
+        password = "234345";
+        assertFalse(PasswordValidator2.isValid(password));
+        password = "^&%^$%#";
+        assertFalse(PasswordValidator2.isValid(password));
+    }
 }
